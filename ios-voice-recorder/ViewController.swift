@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var RecordLBL: UILabel!
     
     var recordIsTapped = false
+    var audioRecorder: AVAudioRecorder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +26,22 @@ class ViewController: UIViewController {
     @IBAction func recordTapped(_ sender: Any) {
         if !recordIsTapped {
             RecordLBL.text = "Recording ..."
-//            RecordBTN.setTitle("Stop", for: .normal)
-//            RecordBTN.backgroundColor = .darkGray
+            //            RecordBTN.setTitle("Stop", for: .normal)
+            //            RecordBTN.backgroundColor = .darkGray
             RecordBTN.setBackgroundImage(UIImage(named: "Stop"), for: .normal)
             recordIsTapped = true
+            startRecording()
         }
         else {
             RecordLBL.text = "Tap to Record"
-//            RecordBTN.setTitle("Record", for: .normal)
-//            RecordBTN.backgroundColor = .systemPink
+            //            RecordBTN.setTitle("Record", for: .normal)
+            //            RecordBTN.backgroundColor = .systemPink
             RecordBTN.setBackgroundImage(UIImage(named: "Record"), for: .normal)
             recordIsTapped = false
+            stopRecording()
         }
     }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if recordIsTapped {
             return true
@@ -45,4 +50,26 @@ class ViewController: UIViewController {
             return false
         }
     }
+    
+    func startRecording() {
+        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+        let recordingName = "recordedVoice.wav"
+        let pathArray = [dirPath, recordingName]
+        let filePath = URL(string: pathArray.joined(separator: "/"))
+        
+        let session = AVAudioSession.sharedInstance()
+        try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+        
+        try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+        audioRecorder.isMeteringEnabled = true
+        audioRecorder.prepareToRecord()
+        audioRecorder.record()
+    }
+    
+    func stopRecording() {
+        audioRecorder.stop()
+        let session = AVAudioSession.sharedInstance()
+        try! session.setActive(false)
+    }
+    
 }
