@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet weak var RecordBTN: UIButton!
     @IBOutlet weak var RecordLBL: UILabel!
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             //            RecordBTN.backgroundColor = .darkGray
             RecordBTN.setBackgroundImage(UIImage(named: "Stop"), for: .normal)
             recordIsTapped = true
-            startRecording()
+            //startRecording()
         }
         else {
             RecordLBL.text = "Tap to Record"
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             //            RecordBTN.backgroundColor = .systemPink
             RecordBTN.setBackgroundImage(UIImage(named: "Record"), for: .normal)
             recordIsTapped = false
-            stopRecording()
+            //stopRecording()
         }
     }
     
@@ -61,6 +61,7 @@ class ViewController: UIViewController {
         try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
         
         try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+        audioRecorder.delegate = self
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
@@ -70,6 +71,10 @@ class ViewController: UIViewController {
         audioRecorder.stop()
         let session = AVAudioSession.sharedInstance()
         try! session.setActive(false)
+    }
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        
     }
     
 }
