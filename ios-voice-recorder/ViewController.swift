@@ -37,4 +37,12 @@ class ViewController: UIViewController {
             recordIsTapped = false
         }
     }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if recordIsTapped {
+            return true
+        }
+        else {
+            return false
+        }
+    }
 }

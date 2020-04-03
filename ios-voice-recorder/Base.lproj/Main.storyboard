@@ -26,6 +26,7 @@
                                 </state>
                                 <connections>
                                     <action selector="recordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uxI-SZ-Y1n"/>
+                                    <segue destination="lmQ-jo-JlA" kind="show" identifier="EndRecord" id="bAx-xO-8rj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uti-kh-gqk">
@@ -64,6 +65,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="XeT-zd-gWv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rUz-Wr-EJ5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUl-aX-cIn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
