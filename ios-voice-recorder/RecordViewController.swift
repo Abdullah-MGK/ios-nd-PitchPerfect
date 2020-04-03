@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordViewController.swift
 //  ios-voice-recorder
 //
 //  Created by Abdullah Khayat on 4/3/20.
@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioRecorderDelegate {
+class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet weak var RecordBTN: UIButton!
     @IBOutlet weak var RecordLBL: UILabel!
