@@ -26,7 +26,6 @@
                                 </state>
                                 <connections>
                                     <action selector="recordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uxI-SZ-Y1n"/>
-                                    <segue destination="lmQ-jo-JlA" kind="show" identifier="EndRecord" id="bAx-xO-8rj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uti-kh-gqk">
@@ -49,6 +48,7 @@
                     <connections>
                         <outlet property="RecordBTN" destination="3X5-qf-TOn" id="6z5-cP-aZ7"/>
                         <outlet property="RecordLBL" destination="Uti-kh-gqk" id="4PH-uG-She"/>
+                        <segue destination="lmQ-jo-JlA" kind="show" identifier="EndRecord" id="Cwe-rG-wDn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
