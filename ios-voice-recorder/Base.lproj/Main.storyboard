@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Play View Controller-->
         <scene sceneID="hMQ-00-B6k">
             <objects>
-                <viewController id="lmQ-jo-JlA" sceneMemberID="viewController">
+                <viewController id="lmQ-jo-JlA" customClass="PlayViewController" customModule="ios_voice_recorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nRk-uZ-nzm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

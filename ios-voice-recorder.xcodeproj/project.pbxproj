@@ -13,6 +13,7 @@
 		3B41CABB2437221000975803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B41CAB92437221000975803 /* Main.storyboard */; };
 		3B41CABD2437221200975803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B41CABC2437221200975803 /* Assets.xcassets */; };
 		3B41CAC02437221200975803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B41CABE2437221200975803 /* LaunchScreen.storyboard */; };
+		3BD823032438009600F8CC9F /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD823022438009600F8CC9F /* PlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3B41CABC2437221200975803 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B41CABF2437221200975803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B41CAC12437221200975803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD823022438009600F8CC9F /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				3B41CAB32437221000975803 /* AppDelegate.swift */,
 				3B41CAB52437221000975803 /* SceneDelegate.swift */,
 				3B41CAB72437221000975803 /* RecordViewController.swift */,
+				3BD823022438009600F8CC9F /* PlayViewController.swift */,
 				3B41CAB92437221000975803 /* Main.storyboard */,
 				3B41CABC2437221200975803 /* Assets.xcassets */,
 				3B41CABE2437221200975803 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD823032438009600F8CC9F /* PlayViewController.swift in Sources */,
 				3B41CAB82437221000975803 /* RecordViewController.swift in Sources */,
 				3B41CAB42437221000975803 /* AppDelegate.swift in Sources */,
 				3B41CAB62437221000975803 /* SceneDelegate.swift in Sources */,
