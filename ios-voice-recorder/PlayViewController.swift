@@ -27,7 +27,7 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var playBTN: UIButton!
     
     enum ButtonType: Int {
-        case slow = 0, fast, lowpitch, fastpitc, echo, reverb, stop, play
+        case slow = 0, fast, lowpitch, fastpitch, echo, reverb, play
     }
     
     override func viewDidLoad() {
@@ -36,15 +36,31 @@ class PlayViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //configureUI(.notPlaying)
+        configureUI(.notPlaying)
     }
     
     @IBAction func play(_ sender: UIButton) {
-        
+        switch(ButtonType(rawValue: sender.tag)!) {
+        case .slow:
+            playSound(rate: 0.5)
+        case .fast:
+            playSound(rate: 1.5)
+        case .fastpitch:
+            playSound(pitch: 1000)
+        case .lowpitch:
+            playSound(pitch: -1000)
+        case .echo:
+            playSound(echo: true)
+        case .reverb:
+            playSound(reverb: true)
+        case .play:
+            playSound()
+        }
+        configureUI(.playing)
     }
     
     @IBAction func stop(_ sender: UIButton) {
-        
+        stopAudio()
     }
     
     /*
