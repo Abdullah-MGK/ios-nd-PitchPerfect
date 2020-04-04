@@ -48,7 +48,7 @@
                     <connections>
                         <outlet property="RecordBTN" destination="3X5-qf-TOn" id="6z5-cP-aZ7"/>
                         <outlet property="RecordLBL" destination="Uti-kh-gqk" id="4PH-uG-She"/>
-                        <segue destination="lmQ-jo-JlA" kind="show" identifier="EndRecord" id="Cwe-rG-wDn"/>
+                        <segue destination="lmQ-jo-JlA" kind="show" identifier="StopRecord" id="nHN-Fd-9Bq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -29,25 +29,16 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             //            RecordBTN.setTitle("Stop", for: .normal)
             //            RecordBTN.backgroundColor = .darkGray
             RecordBTN.setBackgroundImage(UIImage(named: "Stop"), for: .normal)
+            startRecording()
             recordIsTapped = true
-            //startRecording()
         }
         else {
             RecordLBL.text = "Tap to Record"
             //            RecordBTN.setTitle("Record", for: .normal)
             //            RecordBTN.backgroundColor = .systemPink
             RecordBTN.setBackgroundImage(UIImage(named: "Record"), for: .normal)
+            stopRecording()
             recordIsTapped = false
-            //stopRecording()
-        }
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if recordIsTapped {
-            return true
-        }
-        else {
-            return false
         }
     }
     
@@ -74,7 +65,24 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        
+        if flag {
+            performSegue(withIdentifier: "StopRecord", sender: audioRecorder.url)
+        }
     }
     
+    // Initiates the segue with the specified identifier from the current view controller's storyboard file
+    //        override func performSegue(withIdentifier identifier: String, sender: Any?) {
+    //
+    //        }
+    
+    // Determines whether the segue with the specified identifier should be performed
+    // Subclasses can override this method and use it to perform segues conditionally based on current conditions. If you do not implement this method, all segues are performed.
+    //        override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    //            if recordIsTapped {
+    //                return true
+    //            }
+    //            else {
+    //                return false
+    //            }
+    //        }
 }
