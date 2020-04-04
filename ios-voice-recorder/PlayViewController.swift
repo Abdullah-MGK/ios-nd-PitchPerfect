@@ -11,13 +11,35 @@ import UIKit
 class PlayViewController: UIViewController {
     
     var recordedAudioURL: URL!
-
+    
+    
+    @IBOutlet weak var slowBTN: UIButton!
+    
+    @IBOutlet weak var fastBTN: UIButton!
+    
+    @IBOutlet weak var lowpitchBTN: UIButton!
+    
+    @IBOutlet weak var fastpitchBTN: UIButton!
+    
+    @IBOutlet weak var echoBTN: UIButton!
+    
+    @IBOutlet weak var reverbBTN: UIButton!
+    
+    @IBOutlet weak var stopBTN: UIButton!
+     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func play(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func stop(_ sender: UIButton) {
+        
+    }
 
     /*
     // MARK: - Navigation
