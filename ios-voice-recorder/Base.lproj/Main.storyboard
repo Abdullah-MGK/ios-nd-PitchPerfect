@@ -63,52 +63,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DW8-wn-Ik2">
-                                <rect key="frame" x="92" y="160.5" width="230" height="575"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DW8-wn-Ik2">
+                                <rect key="frame" x="82" y="173" width="250" height="550"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="WgM-fG-myr">
-                                        <rect key="frame" x="0.0" y="0.0" width="230" height="90"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="WgM-fG-myr">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkY-ai-SHh">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <state key="normal" backgroundImage="Slow"/>
+                                                <connections>
+                                                    <action selector="play:" destination="lmQ-jo-JlA" eventType="touchUpInside" id="awV-kP-NAo"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2U-IQ-mfI">
-                                                <rect key="frame" x="140" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="150" y="0.0" width="100" height="100"/>
                                                 <state key="normal" backgroundImage="Fast"/>
+                                                <connections>
+                                                    <action selector="play:" destination="lmQ-jo-JlA" eventType="touchUpInside" id="qWU-IX-Yfs"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="P9v-gC-qne">
-                                        <rect key="frame" x="0.0" y="140" width="230" height="90"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="P9v-gC-qne">
+                                        <rect key="frame" x="0.0" y="150" width="250" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw1-NW-F1w">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <state key="normal" backgroundImage="LowPitch"/>
+                                                <connections>
+                                                    <action selector="play:" destination="lmQ-jo-JlA" eventType="touchUpInside" id="g01-bM-ZH6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxV-FD-qon">
-                                                <rect key="frame" x="140" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="150" y="0.0" width="100" height="100"/>
                                                 <state key="normal" backgroundImage="HighPitch"/>
+                                                <connections>
+                                                    <action selector="play:" destination="lmQ-jo-JlA" eventType="touchUpInside" id="hnR-EH-dfM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="298-ay-4QN">
-                                        <rect key="frame" x="0.0" y="280" width="230" height="90"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="298-ay-4QN">
+                                        <rect key="frame" x="0.0" y="300" width="250" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqm-hx-8hG">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <state key="normal" backgroundImage="Echo"/>
+                                                <connections>
+                                                    <action selector="play:" destination="lmQ-jo-JlA" eventType="touchUpInside" id="qOz-B8-X1J"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nY-Cp-dhB">
-                                                <rect key="frame" x="140" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="150" y="0.0" width="100" height="100"/>
                                                 <state key="normal" backgroundImage="Reverb"/>
+                                                <connections>
+                                                    <action selector="play:" destination="lmQ-jo-JlA" eventType="touchUpInside" id="xph-b6-XGR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyq-FI-Ca7">
-                                        <rect key="frame" x="37.5" y="420" width="155" height="155"/>
-                                        <state key="normal" backgroundImage="Stop"/>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="3tY-qH-oCP">
+                                        <rect key="frame" x="0.0" y="450" width="250" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzv-je-zfA">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="ek7-cc-HPZ"/>
+                                                    <constraint firstAttribute="height" constant="100" id="smk-c2-RtA"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Stop"/>
+                                                <connections>
+                                                    <action selector="stop:" destination="lmQ-jo-JlA" eventType="touchUpInside" id="9zU-v2-Ofb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRS-br-PFj">
+                                                <rect key="frame" x="150" y="0.0" width="100" height="100"/>
+                                                <state key="normal" backgroundImage="Record"/>
+                                                <connections>
+                                                    <action selector="play:" destination="lmQ-jo-JlA" eventType="touchUpInside" id="tBW-wT-LAk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -125,9 +162,10 @@
                         <outlet property="fastBTN" destination="n2U-IQ-mfI" id="CtJ-bV-1LH"/>
                         <outlet property="fastpitchBTN" destination="yxV-FD-qon" id="Zhy-Mf-Skj"/>
                         <outlet property="lowpitchBTN" destination="Iw1-NW-F1w" id="G0a-Lt-v19"/>
+                        <outlet property="playBTN" destination="eRS-br-PFj" id="O63-is-Pbj"/>
                         <outlet property="reverbBTN" destination="8nY-Cp-dhB" id="QHg-Pd-PhR"/>
                         <outlet property="slowBTN" destination="VkY-ai-SHh" id="a0M-Nf-41p"/>
-                        <outlet property="stopBTN" destination="Vyq-FI-Ca7" id="ajT-tS-Kp2"/>
+                        <outlet property="stopBTN" destination="Lzv-je-zfA" id="qP8-fI-5TI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUl-aX-cIn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

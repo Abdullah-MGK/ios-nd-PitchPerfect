@@ -26,6 +26,8 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var reverbBTN: UIButton!
     
     @IBOutlet weak var stopBTN: UIButton!
+    
+    @IBOutlet weak var playBTN: UIButton!
      
     override func viewDidLoad() {
         super.viewDidLoad()
