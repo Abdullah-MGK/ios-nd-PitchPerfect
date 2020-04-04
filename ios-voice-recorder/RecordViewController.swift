@@ -70,11 +70,20 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    // Initiates the segue with the specified identifier from the current view controller's storyboard file
-    //        override func performSegue(withIdentifier identifier: String, sender: Any?) {
-    //
-    //        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "StopRecord" {
+            let playViewController = segue.destination as! PlayViewController
+            let recordedAudioURL = sender as! URL
+            playViewController.recordedAudioURL = recordedAudioURL
+        }
+    }
     
+    // THIS doesn't need to be overriden, JUST call it
+    // Initiates the segue with the specified identifier from the current view controller's storyboard file
+    //  override func performSegue(withIdentifier identifier: String, sender: Any?) {
+    // }
+    
+    // THIS performs the segue if it returns true, needs to OVERRIDDE
     // Determines whether the segue with the specified identifier should be performed
     // Subclasses can override this method and use it to perform segues conditionally based on current conditions. If you do not implement this method, all segues are performed.
     //        override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
