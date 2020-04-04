@@ -19,7 +19,6 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(recordIsTapped)
         // Do any additional setup after loading the view.
     }
     
@@ -67,6 +66,18 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             performSegue(withIdentifier: "StopRecord", sender: audioRecorder.url)
+        }
+        else {
+            
+            let alert = UIAlertController(
+                title: "Audio Recorder Error",
+                message: "Saving your record was failing",
+                preferredStyle: .alert
+            )
+            
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
