@@ -14,6 +14,11 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var RecordBTN: UIButton!
     @IBOutlet weak var RecordLBL: UILabel!
     
+    /*
+     var audioRecorder: AVAudioRecorder!
+     audioRecorder.delegate = self
+     */
+    
     var recordIsTapped = false
     var audioRecorder: AVAudioRecorder!
     
