@@ -190,6 +190,119 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="G3b-Pu-MCK">
+            <objects>
+                <viewController id="3Ov-SL-h7s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7MD-Lh-g7G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLi-Mx-5CK">
+                                <rect key="frame" x="129.5" y="370.5" width="155" height="155"/>
+                                <state key="normal" image="Record"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xc-k9-Te3">
+                                <rect key="frame" x="154" y="545.5" width="106.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1xc-k9-Te3" firstAttribute="centerX" secondItem="7MD-Lh-g7G" secondAttribute="centerX" id="SON-8Q-EaO"/>
+                            <constraint firstItem="1xc-k9-Te3" firstAttribute="top" secondItem="NLi-Mx-5CK" secondAttribute="bottom" constant="20" id="fai-58-U1y"/>
+                            <constraint firstItem="NLi-Mx-5CK" firstAttribute="centerY" secondItem="7MD-Lh-g7G" secondAttribute="centerY" id="i7x-1r-ZXf"/>
+                            <constraint firstItem="NLi-Mx-5CK" firstAttribute="centerX" secondItem="7MD-Lh-g7G" secondAttribute="centerX" id="uEU-du-gVa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q76-sI-x9C"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kUg-W0-frx"/>
+                    <connections>
+                        <segue destination="zse-me-fet" kind="show" id="DbP-Jh-MXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gM7-Ca-M8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="870.53571428571422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="P7M-B9-8mN">
+            <objects>
+                <viewController id="zse-me-fet" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qaf-7j-Ov0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWl-za-KMq">
+                                <rect key="frame" x="105" y="271" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Slow"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZd-I1-PN9">
+                                <rect key="frame" x="105" y="369" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="LowPitch"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODv-ra-xhw">
+                                <rect key="frame" x="226" y="271" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Fast"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAh-xz-OPh">
+                                <rect key="frame" x="226" y="369" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="HighPitch"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cre-Vu-SZQ">
+                                <rect key="frame" x="105" y="467" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Echo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fS-J7-iq2">
+                                <rect key="frame" x="226" y="467" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Reverb"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpQ-Ko-6C1">
+                                <rect key="frame" x="73" y="565" width="155" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Stop"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dup-vG-4D4">
+                                <rect key="frame" x="226" y="565" width="155" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Record"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mcB-xM-IyI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cow-o9-OEz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTO-OL-JCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1938" y="871"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0CU-l6-bZw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rxw-wA-jqF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5it-W5-smx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Ov-SL-h7s" kind="relationship" relationship="rootViewController" id="Emr-Bn-ZRO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCO-EJ-pHK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="870.53571428571422"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Echo" width="90" height="90"/>
