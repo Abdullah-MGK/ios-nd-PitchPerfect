@@ -33,7 +33,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             RecordLBL.text = "Recording ..."
             //            RecordBTN.setTitle("Stop", for: .normal)
             //            RecordBTN.backgroundColor = .darkGray
-            RecordBTN.setBackgroundImage(UIImage(named: "Stop"), for: .normal)
+                        
+            RecordBTN.setImage(UIImage(named: "Stop"), for: .normal)
             recordIsTapped = true
         }
         else {
@@ -41,7 +42,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             RecordLBL.text = "Tap to Record"
             //            RecordBTN.setTitle("Record", for: .normal)
             //            RecordBTN.backgroundColor = .systemPink
-            RecordBTN.setBackgroundImage(UIImage(named: "Record"), for: .normal)
+            RecordBTN.setImage(UIImage(named: "Record"), for: .normal)
             recordIsTapped = false
         }
     }
