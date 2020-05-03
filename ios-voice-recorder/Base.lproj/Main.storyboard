@@ -131,6 +131,16 @@
                         <viewLayoutGuide key="safeArea" id="mcB-xM-IyI"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cow-o9-OEz"/>
+                    <connections>
+                        <outlet property="echoBTN" destination="cre-Vu-SZQ" id="Fqf-US-oZW"/>
+                        <outlet property="fastBTN" destination="ODv-ra-xhw" id="EKU-kA-kdO"/>
+                        <outlet property="highPitchBTN" destination="vAh-xz-OPh" id="ltm-mY-sqP"/>
+                        <outlet property="lowPitchBTN" destination="GZd-I1-PN9" id="Gos-ts-cZm"/>
+                        <outlet property="playBTN" destination="dup-vG-4D4" id="HKf-EG-qgr"/>
+                        <outlet property="reverbBTN" destination="8fS-J7-iq2" id="Ckk-iW-deA"/>
+                        <outlet property="slowBTN" destination="zWl-za-KMq" id="Ybh-P8-9PL"/>
+                        <outlet property="stopBTN" destination="XpQ-Ko-6C1" id="X15-ib-cd5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTO-OL-JCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
