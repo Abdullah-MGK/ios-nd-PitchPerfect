@@ -162,6 +162,7 @@ extension PlayViewController: AVAudioPlayerDelegate {
         highPitchBTN.isEnabled = enabled
         echoBTN.isEnabled = enabled
         reverbBTN.isEnabled = enabled
+        playBTN.isEnabled = enabled
     }
 
     func showAlert(_ title: String, message: String) {
