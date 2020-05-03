@@ -14,6 +14,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var RecordBTN: UIButton!
     @IBOutlet weak var RecordLBL: UILabel!
     
+    enum RecordingState { case notRecording, recording, recorded }
+    
     /*
      var audioRecorder: AVAudioRecorder!
      audioRecorder.delegate = self
@@ -25,6 +27,11 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureUI(.notRecording)
     }
     
     @IBAction func recordTapped(_ sender: Any) {
@@ -51,32 +58,26 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.prepareToRecord()
         audioRecorder.record()
         
-        RecordLBL.text = "Recording ..."
-        RecordBTN.setImage(UIImage(named: "Stop"), for: .normal)
-        recordIsTapped = true
-        
+        configureUI(.recording)
     }
     
     func stopRecording() {
         audioRecorder.stop()
         let session = AVAudioSession.sharedInstance()
         try! session.setActive(false)
+        
+        configureUI(.recorded)
         // audioRecorderDidFinishRecording() will be called
     }
     
     // called after stopRecording()
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        
-        RecordLBL.text = "Tap to Record"
-        RecordBTN.setImage(UIImage(named: "Record"), for: .normal)
-        recordIsTapped = false
-        
+
         if flag {
             performSegue(withIdentifier: "StopRecord", sender: audioRecorder.url)
         }
             
         else {
-            
             let alert = UIAlertController(
                 title: "Audio Recorder Error",
                 message: "Saving your record was failing",
@@ -86,6 +87,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
             
             self.present(alert, animated: true, completion: nil)
+            
+            configureUI(.notRecording)
         }
     }
     
@@ -94,6 +97,28 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             let playViewController = segue.destination as! PlayViewController
             let recordedAudioURL = sender as! URL
             playViewController.recordedAudioURL = recordedAudioURL
+        }
+    }
+    
+    func configureUI(_ recordState: RecordingState) {
+        
+        switch(recordState) {
+        case .notRecording:
+            RecordLBL.text = "Tap to Record"
+            RecordBTN.setImage(UIImage(named: "Record"), for: .normal)
+            recordIsTapped = false
+            RecordBTN.isEnabled = true
+
+        case .recording:
+            RecordLBL.text = "Recording ..."
+            RecordBTN.setImage(UIImage(named: "Stop"), for: .normal)
+            recordIsTapped = true
+            RecordBTN.isEnabled = true // delete
+            
+        case .recorded:
+            RecordLBL.text = "Processing ..."
+            recordIsTapped = true // delete
+            RecordBTN.isEnabled = false
         }
     }
 }
