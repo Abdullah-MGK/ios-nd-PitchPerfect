@@ -30,18 +30,17 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordTapped(_ sender: Any) {
         if !recordIsTapped {
             startRecording()
+            
+            // move these to start recording
             RecordLBL.text = "Recording ..."
-            //            RecordBTN.setTitle("Stop", for: .normal)
-            //            RecordBTN.backgroundColor = .darkGray
-                        
             RecordBTN.setImage(UIImage(named: "Stop"), for: .normal)
             recordIsTapped = true
         }
         else {
             stopRecording()
+            
+            // move these to stop recording
             RecordLBL.text = "Tap to Record"
-            //            RecordBTN.setTitle("Record", for: .normal)
-            //            RecordBTN.backgroundColor = .systemPink
             RecordBTN.setImage(UIImage(named: "Record"), for: .normal)
             recordIsTapped = false
         }
