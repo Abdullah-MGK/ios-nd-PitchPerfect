@@ -30,19 +30,9 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordTapped(_ sender: Any) {
         if !recordIsTapped {
             startRecording()
-            
-            // move these to start recording
-            RecordLBL.text = "Recording ..."
-            RecordBTN.setImage(UIImage(named: "Stop"), for: .normal)
-            recordIsTapped = true
         }
         else {
             stopRecording()
-            
-            // move these to stop recording
-            RecordLBL.text = "Tap to Record"
-            RecordBTN.setImage(UIImage(named: "Record"), for: .normal)
-            recordIsTapped = false
         }
     }
     
@@ -60,19 +50,33 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
+        
+        RecordLBL.text = "Recording ..."
+        RecordBTN.setImage(UIImage(named: "Stop"), for: .normal)
+        recordIsTapped = true
+        
     }
     
     func stopRecording() {
         audioRecorder.stop()
         let session = AVAudioSession.sharedInstance()
         try! session.setActive(false)
+        // audioRecorderDidFinishRecording() will be called
     }
     
+    // called after stopRecording()
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        RecordLBL.text = "Processing ..."
+        
         if flag {
             performSegue(withIdentifier: "StopRecord", sender: audioRecorder.url)
         }
+            
         else {
+            
+            RecordLBL.text = "Tap to Record"
+            RecordBTN.setImage(UIImage(named: "Record"), for: .normal)
+            recordIsTapped = false
             
             let alert = UIAlertController(
                 title: "Audio Recorder Error",
