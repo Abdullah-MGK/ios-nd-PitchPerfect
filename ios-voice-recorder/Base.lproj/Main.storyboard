@@ -74,10 +74,16 @@
                                                     <constraint firstAttribute="height" constant="130" id="Ycr-aO-flm"/>
                                                 </constraints>
                                                 <state key="normal" image="Slow"/>
+                                                <connections>
+                                                    <action selector="playSoundTapped:" destination="zse-me-fet" eventType="touchUpInside" id="FAN-nZ-u89"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODv-ra-xhw">
                                                 <rect key="frame" x="150" y="0.0" width="130" height="130"/>
                                                 <state key="normal" image="Fast"/>
+                                                <connections>
+                                                    <action selector="playSoundTapped:" destination="zse-me-fet" eventType="touchUpInside" id="PHb-bz-U4q"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -87,10 +93,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZd-I1-PN9">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                                 <state key="normal" image="LowPitch"/>
+                                                <connections>
+                                                    <action selector="playSoundTapped:" destination="zse-me-fet" eventType="touchUpInside" id="ah9-PT-T3j"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAh-xz-OPh">
                                                 <rect key="frame" x="150" y="0.0" width="130" height="130"/>
                                                 <state key="normal" image="HighPitch"/>
+                                                <connections>
+                                                    <action selector="playSoundTapped:" destination="zse-me-fet" eventType="touchUpInside" id="6Ct-kg-jMD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -100,10 +112,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cre-Vu-SZQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                                 <state key="normal" image="Echo"/>
+                                                <connections>
+                                                    <action selector="playSoundTapped:" destination="zse-me-fet" eventType="touchUpInside" id="fh7-T3-emI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fS-J7-iq2">
                                                 <rect key="frame" x="150" y="0.0" width="130" height="130"/>
                                                 <state key="normal" image="Reverb"/>
+                                                <connections>
+                                                    <action selector="playSoundTapped:" destination="zse-me-fet" eventType="touchUpInside" id="7bK-ge-6CI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -113,10 +131,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpQ-Ko-6C1">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                                 <state key="normal" image="Stop"/>
+                                                <connections>
+                                                    <action selector="stopTapped:" destination="zse-me-fet" eventType="touchUpInside" id="pAL-IH-rU6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dup-vG-4D4">
                                                 <rect key="frame" x="150" y="0.0" width="130" height="130"/>
                                                 <state key="normal" image="Play"/>
+                                                <connections>
+                                                    <action selector="playSoundTapped:" destination="zse-me-fet" eventType="touchUpInside" id="MNB-Wm-9Qr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

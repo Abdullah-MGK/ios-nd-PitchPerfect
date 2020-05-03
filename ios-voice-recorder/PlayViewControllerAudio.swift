@@ -158,8 +158,8 @@ extension PlayViewController: AVAudioPlayerDelegate {
     func setPlayButtonsEnabled(_ enabled: Bool) {
         slowBTN.isEnabled = enabled
         fastBTN.isEnabled = enabled
-        lowpitchBTN.isEnabled = enabled
-        fastpitchBTN.isEnabled = enabled
+        lowPitchBTN.isEnabled = enabled
+        highPitchBTN.isEnabled = enabled
         echoBTN.isEnabled = enabled
         reverbBTN.isEnabled = enabled
     }

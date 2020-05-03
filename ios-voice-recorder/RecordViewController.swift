@@ -66,17 +66,16 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     
     // called after stopRecording()
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        RecordLBL.text = "Processing ..."
+        
+        RecordLBL.text = "Tap to Record"
+        RecordBTN.setImage(UIImage(named: "Record"), for: .normal)
+        recordIsTapped = false
         
         if flag {
             performSegue(withIdentifier: "StopRecord", sender: audioRecorder.url)
         }
             
         else {
-            
-            RecordLBL.text = "Tap to Record"
-            RecordBTN.setImage(UIImage(named: "Record"), for: .normal)
-            recordIsTapped = false
             
             let alert = UIAlertController(
                 title: "Audio Recorder Error",
