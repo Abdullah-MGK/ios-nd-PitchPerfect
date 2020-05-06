@@ -70,7 +70,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWl-za-KMq">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="zWl-za-KMq" secondAttribute="height" multiplier="1:1" id="D53-IQ-JQb"/>
+                                                    <constraint firstAttribute="width" constant="130" id="ceR-1v-pbb"/>
+                                                    <constraint firstAttribute="height" constant="130" id="mhv-OM-NT8"/>
                                                 </constraints>
                                                 <state key="normal" image="Slow"/>
                                                 <connections>
@@ -158,8 +159,6 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zWl-za-KMq" firstAttribute="height" relation="greaterThanOrEqual" secondItem="qaf-7j-Ov0" secondAttribute="height" multiplier="0.145089" id="8IR-fl-6ji"/>
-                            <constraint firstItem="zWl-za-KMq" firstAttribute="width" relation="lessThanOrEqual" secondItem="qaf-7j-Ov0" secondAttribute="width" multiplier="0.31401" id="CEz-7b-in2"/>
                             <constraint firstItem="yLd-3R-jPD" firstAttribute="centerX" secondItem="mcB-xM-IyI" secondAttribute="centerX" id="Eg0-Nh-Yoo"/>
                             <constraint firstItem="yLd-3R-jPD" firstAttribute="centerY" secondItem="mcB-xM-IyI" secondAttribute="centerY" id="k8Y-jE-6bk"/>
                         </constraints>
