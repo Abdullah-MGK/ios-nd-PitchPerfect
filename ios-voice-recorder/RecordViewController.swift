@@ -66,8 +66,6 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         
-        print("audioRecorderDidFinishRecording")
-        
         if flag {
             performSegue(withIdentifier: "StopRecord", sender: audioRecorder.url)
         }
