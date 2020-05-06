@@ -148,10 +148,8 @@ extension PlayViewController: AVAudioPlayerDelegate {
         switch(playState) {
         case .playing:
             setPlayButtonsEnabled(false)
-            stopBTN.isEnabled = true
         case .notPlaying:
             setPlayButtonsEnabled(true)
-            stopBTN.isEnabled = false
         }
     }
     
@@ -163,6 +161,7 @@ extension PlayViewController: AVAudioPlayerDelegate {
         echoBTN.isEnabled = enabled
         reverbBTN.isEnabled = enabled
         playBTN.isEnabled = enabled
+        stopBTN.isEnabled = !enabled
     }
 
     func showAlert(_ title: String, message: String) {
