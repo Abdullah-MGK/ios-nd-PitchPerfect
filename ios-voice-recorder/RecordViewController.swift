@@ -11,15 +11,10 @@ import AVFoundation
 
 class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     
-    @IBOutlet weak var RecordBTN: UIButton!
-    @IBOutlet weak var RecordLBL: UILabel!
+    @IBOutlet weak var recordBTN: UIButton!
+    @IBOutlet weak var recordLBL: UILabel!
     
-    enum RecordingState { case notRecording, recording, recorded }
-    
-    /*
-     var audioRecorder: AVAudioRecorder!
-     audioRecorder.delegate = self
-     */
+    enum RecordingState { case notRecording, recording, recordingEnded }
     
     var recordIsTapped = false
     var audioRecorder: AVAudioRecorder!
@@ -62,21 +57,21 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func stopRecording() {
-        audioRecorder.stop()
         let session = AVAudioSession.sharedInstance()
-        try! session.setActive(false)
-        
-        configureUI(.recorded)
+        configureUI(.recordingEnded)
+        audioRecorder.stop()
         // audioRecorderDidFinishRecording() will be called
+        try! session.setActive(false)
     }
     
-    // called after stopRecording()
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-
+        
+        print("audioRecorderDidFinishRecording")
+        
         if flag {
             performSegue(withIdentifier: "StopRecord", sender: audioRecorder.url)
         }
-            
+        
         else {
             let alert = UIAlertController(
                 title: "Audio Recorder Error",
@@ -87,9 +82,10 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
             
             self.present(alert, animated: true, completion: nil)
-            
-            configureUI(.notRecording)
         }
+        
+        configureUI(.notRecording)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,21 +100,22 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         
         switch(recordState) {
         case .notRecording:
-            RecordLBL.text = "Tap to Record"
-            RecordBTN.setImage(UIImage(named: "Record"), for: .normal)
+            recordLBL.text = "Tap to Record"
+            recordBTN.setImage(UIImage(named: "Record"), for: .normal)
             recordIsTapped = false
-            RecordBTN.isEnabled = true
-
-        case .recording:
-            RecordLBL.text = "Recording ..."
-            RecordBTN.setImage(UIImage(named: "Stop"), for: .normal)
-            recordIsTapped = true
-            RecordBTN.isEnabled = true // delete
+            recordBTN.isEnabled = true
             
-        case .recorded:
-            RecordLBL.text = "Processing ..."
-            recordIsTapped = true // delete
-            RecordBTN.isEnabled = false
+        case .recording:
+            recordLBL.text = "Recording ..."
+            recordBTN.setImage(UIImage(named: "Stop"), for: .normal)
+            recordIsTapped = true
+            recordBTN.isEnabled = true  // delete
+            
+        case .recordingEnded:
+            recordLBL.text = "Processing ..."
+            // already: recordBTN.setImage(UIImage(named: "Stop"), for: .normal)
+            // already: recordIsTapped = true
+            recordBTN.isEnabled = false
         }
     }
 }

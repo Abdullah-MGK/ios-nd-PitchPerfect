@@ -44,8 +44,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="kUg-W0-frx"/>
                     <connections>
-                        <outlet property="RecordBTN" destination="Xik-IK-e2i" id="K9A-bz-6gd"/>
-                        <outlet property="RecordLBL" destination="gc8-LN-nFE" id="lME-2e-QAv"/>
+                        <outlet property="recordBTN" destination="Xik-IK-e2i" id="KRs-76-fY8"/>
+                        <outlet property="recordLBL" destination="gc8-LN-nFE" id="Moj-zE-ChB"/>
                         <segue destination="zse-me-fet" kind="show" identifier="StopRecord" id="DbP-Jh-MXL"/>
                     </connections>
                 </viewController>
