@@ -16,7 +16,7 @@ class PlayViewController: UIViewController {
     var audioEngine : AVAudioEngine!
     var audioPlayerNode : AVAudioPlayerNode!
     var stopTimer : Timer!
-    
+        
     @IBOutlet weak var slowBTN: UIButton!
     @IBOutlet weak var fastBTN: UIButton!
     @IBOutlet weak var lowPitchBTN: UIButton!
@@ -39,6 +39,10 @@ class PlayViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureUI(.notPlaying)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        stopAudio()
     }
     
     @IBAction func playSoundTapped(_ sender: UIButton) {

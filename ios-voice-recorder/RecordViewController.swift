@@ -19,6 +19,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     var recordIsTapped = false
     var audioRecorder: AVAudioRecorder!
     
+    let stopRecordSegueId = "StopRecord"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -67,7 +69,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         
         if flag {
-            performSegue(withIdentifier: "StopRecord", sender: audioRecorder.url)
+            performSegue(withIdentifier: stopRecordSegueId, sender: audioRecorder.url)
         }
         
         else {
@@ -87,7 +89,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "StopRecord" {
+        if segue.identifier == stopRecordSegueId {
             let playViewController = segue.destination as! PlayViewController
             let recordedAudioURL = sender as! URL
             playViewController.recordedAudioURL = recordedAudioURL
@@ -107,7 +109,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             recordLBL.text = "Recording ..."
             recordBTN.setImage(UIImage(named: "Stop"), for: .normal)
             recordIsTapped = true
-            recordBTN.isEnabled = true  // delete
+            // already: recordBTN.isEnabled = true
             
         case .recordingEnded:
             recordLBL.text = "Processing ..."
