@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B41CAB02437221000975803 /* ios-voice-recorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-voice-recorder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B41CAB02437221000975803 /* ios-PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-PitchPerfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B41CAB32437221000975803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B41CAB52437221000975803 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B41CAB72437221000975803 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		3B41CAA72437221000975803 = {
 			isa = PBXGroup;
 			children = (
-				3B41CAB22437221000975803 /* ios-voice-recorder */,
+				3B41CAB22437221000975803 /* ios-PitchPerfect */,
 				3B41CAB12437221000975803 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		3B41CAB12437221000975803 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B41CAB02437221000975803 /* ios-voice-recorder.app */,
+				3B41CAB02437221000975803 /* ios-PitchPerfect.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B41CAB22437221000975803 /* ios-voice-recorder */ = {
+		3B41CAB22437221000975803 /* ios-PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
 				3B41CAB32437221000975803 /* AppDelegate.swift */,
@@ -70,15 +70,15 @@
 				3B41CABE2437221200975803 /* LaunchScreen.storyboard */,
 				3B41CAC12437221200975803 /* Info.plist */,
 			);
-			path = "ios-voice-recorder";
+			path = "ios-PitchPerfect";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B41CAAF2437221000975803 /* ios-voice-recorder */ = {
+		3B41CAAF2437221000975803 /* ios-PitchPerfect */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B41CAC42437221200975803 /* Build configuration list for PBXNativeTarget "ios-voice-recorder" */;
+			buildConfigurationList = 3B41CAC42437221200975803 /* Build configuration list for PBXNativeTarget "ios-PitchPerfect" */;
 			buildPhases = (
 				3B41CAAC2437221000975803 /* Sources */,
 				3B41CAAD2437221000975803 /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = "ios-voice-recorder";
+			name = "ios-PitchPerfect";
 			productName = "ios-voice-recorder";
-			productReference = 3B41CAB02437221000975803 /* ios-voice-recorder.app */;
+			productReference = 3B41CAB02437221000975803 /* ios-PitchPerfect.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3B41CAAB2437221000975803 /* Build configuration list for PBXProject "ios-voice-recorder" */;
+			buildConfigurationList = 3B41CAAB2437221000975803 /* Build configuration list for PBXProject "ios-PitchPerfect" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B41CAAF2437221000975803 /* ios-voice-recorder */,
+				3B41CAAF2437221000975803 /* ios-PitchPerfect */,
 			);
 		};
 /* End PBXProject section */
@@ -294,13 +294,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 283G327282;
-				INFOPLIST_FILE = "ios-voice-recorder/Info.plist";
+				INFOPLIST_FILE = "ios-PitchPerfect/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamIos.ios-voice-recorder";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamIos.ios-PitchPerfect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,13 +313,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 283G327282;
-				INFOPLIST_FILE = "ios-voice-recorder/Info.plist";
+				INFOPLIST_FILE = "ios-PitchPerfect/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamIos.ios-voice-recorder";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamIos.ios-PitchPerfect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,7 +329,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B41CAAB2437221000975803 /* Build configuration list for PBXProject "ios-voice-recorder" */ = {
+		3B41CAAB2437221000975803 /* Build configuration list for PBXProject "ios-PitchPerfect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B41CAC22437221200975803 /* Debug */,
@@ -338,7 +338,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B41CAC42437221200975803 /* Build configuration list for PBXNativeTarget "ios-voice-recorder" */ = {
+		3B41CAC42437221200975803 /* Build configuration list for PBXNativeTarget "ios-PitchPerfect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B41CAC52437221200975803 /* Debug */,
